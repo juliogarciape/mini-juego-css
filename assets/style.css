@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{margin:0;padding:0;box-sizing: border-box;}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#puntaje{
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    font-size: 1.5rem;
+    letter-spacing: .5px;
+    font-weight: normal;
+    font-family: 'Anton', sans-serif;
+    z-index: 11;
+}
+
+#areaJ{
+    user-select: none;
+    position: relative;
+    height: 500px;
+    width: 768px;
+    border: 1px solid;
+    background-image: url('img/background.jpg');
+    cursor: url('img/ovni.png'), default;
+    overflow : hidden;
+    color: #fff;
+}
+
+#areaJ #instrucciones {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Anton', sans-serif;
+    z-index: 11;
+}
+
+#areaJ:hover #instrucciones {
+    display: none;
+}
+
+#areaJ:hover {
+    animation: fondoanimado 1.5s infinite linear;
+}
+
+.meteoritos {
+    position: relative;
+    background-image: url('img/meteorito.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-100%);
+}
+
+.meteoritos:hover ~ #findejuego {
+    display: flex;
+}
+
+#areaJ:hover .meteoritos {
+    animation-name: meteorito;
+    animation-iteration-count: infinite;
+}
+
+#findejuego:hover {
+    display: flex;
+}
+
+#findejuego {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    cursor: default;
+}
+
+#findejuego div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#findejuego h2{
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+}
+
+
+@keyframes fondoanimado {
+    from{
+        background-position-x: 0px;
+    }
+    to {
+        background-position-x: 480px;
+    }
+}
+
+
+@keyframes meteorito {
+    to {
+        left: 100%;
+        transform: translateX(100%);
+    }
+} 
+

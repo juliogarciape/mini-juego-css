@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Space Uff &#x1F6F8;</title>
+</head>
+<body onload="carga()">
+    <div id="areaJ">
+        <h2 id="instrucciones">Ingresa en el area de juego para iniciar</h2>
+        <h3 id="puntaje">Puntos: <span id="point"></span></h3>
+        <div class="meteoritos" style="width: 90px; height : 90px; left: -500px; animation-duration:3.5s; animation-timing-function: ease-in;"></div>
+        <div class="meteoritos" style="width: 35px; height : 35px; left: -100px; animation-duration:4s; animation-timing-function: ease-out;"></div>
+        <div class="meteoritos" style="width: 60px; height : 60px; left: -50px; animation-duration:6s; animation-timing-function: ease;"></div>
+        <div class="meteoritos" style="width: 45px; height : 45px; left: -250px; animation-duration:2s; animation-timing-function: linear;"></div>
+        <div class="meteoritos" style="width: 60px; height : 60px; left: -50px; animation-duration:6s; animation-timing-function: ease;"></div>
+        <div class="meteoritos" style="width: 35px; height : 35px; left: -100px; animation-duration:4s; animation-timing-function: ease-out;"></div>
+        <div class="meteoritos" style="width: 90px; height : 90px; left: -500px; animation-duration:3.5s; animation-timing-function: ease-in;"></div>
+        <div class="meteoritos" style="width: 35px; height : 35px; left: -100px; animation-duration:4s; animation-timing-function: ease-out;"></div>
+        <div class="meteoritos" style="width: 45px; height : 45px; left: -250px; animation-duration:2.5s; animation-timing-function: cubic-bezier(.85,.31,.19,.77);"></div>
+        <div id="findejuego">
+            <h2>Game Over</h2>
+            <img width="200" src="assets/img/alien.png" />
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
